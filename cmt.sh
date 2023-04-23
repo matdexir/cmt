@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TYPE=$(gum choose --cursor="◉ " "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert")
+TYPE=$(gum choose --cursor="◉ " "fix" "feat" "docs" "style" "ci" "refactor" "test" "chore" "revert")
 SCOPE=$(gum input --placeholder "scope")
 
 
