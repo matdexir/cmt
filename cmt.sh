@@ -8,6 +8,7 @@ TYPE=$(gum choose --cursor="◉ " "fix" "feat" "docs" "style" "ci" "refactor" "t
 SCOPE=$(gum input --placeholder "scope")
 
 # confirms for breaking changes or not
+BREAKING=""
 gum confirm "Breaking Changes?" && BREAKING="!"
 
 # tests if scope is empty or not
