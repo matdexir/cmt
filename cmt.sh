@@ -13,11 +13,10 @@ set -o pipefail
 # Outputs:
 #   the help message
 function help_msg {
-  cat << END
-    Usage: cmt.sh [flag]
-          -a, --ammend: For amending the previous commit
-          -h, --help:   For printing this message here
-  END
+  echo -e "Usage: cmt.sh [flag]"
+  echo -e "\t-a, --ammend: For amending the previous commit"
+  echo -e "\t-h, --help:   For printing this message here"
+
 }
 
 
