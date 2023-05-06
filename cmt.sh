@@ -14,7 +14,7 @@ set -o pipefail
 #   the help message
 function help_msg {
   echo -e "Usage: cmt.sh [flag]"
-  echo -e "\t-a, --ammend: For amending the previous commit"
+  echo -e "\t-a, --amend: For amending the previous commit"
   echo -e "\t-h, --help:   For printing this message here"
 
 }
@@ -23,6 +23,19 @@ function help_msg {
 SHORT=a,h
 LONG=ammend,help
 VALID_ARGS=$(getopt --options $SHORT --longoptions $LONG)
+
+ARG=${1:-'--none'}
+case "$ARG" in
+  "-a","--amend") echo 1
+  ;;
+  "-h","--help") echo 2 or 3
+  ;;
+  "--none") : 
+  ;;
+  *) echo "Unknow argument"
+    exit 1
+  ;;
+esac
 
 
 # gets the type of commit
