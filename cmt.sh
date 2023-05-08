@@ -12,16 +12,16 @@ set -o pipefail
 #   None
 # Outputs:
 #   the help message
-function help_msg {
+help_msg() {
   echo -e "Usage: cmt.sh [flag]"
   echo -e "\t-a: For amending the previous commit"
   echo -e "\t-h: For printing this message here"
 
 }
 
-
+# getopts only supports short flags, hence I will be looking for an alternative in the future
 SHORT=":ah"
-LONG="amend,help"
+# LONG="amend,help"
 AMEND=""
 
 
@@ -36,7 +36,7 @@ while getopts $SHORT arg; do
       exit 0
 		;;
 		*)
-			echo 'Argument ${arg} is not recognized' >&2
+			echo "Argument ${arg} is not recognized" >&2
 			exit 1
 		;;
 	esac
