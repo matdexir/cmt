@@ -6,6 +6,18 @@ It's a tool for writing [Conventional commit messages](https://www.conventionalc
 
 ```
 gum
-posix shell
+bash(Bourne-Again Shell)
 ```
 
+## Usage
+
+Assuming that your default shell is `bash`, then:
+
+```
+chmod +x cmt.sh
+./cmt.sh
+```
+
+## Note 
+
+You can also add `cmt.sh` to your `$PATH` for convenience.
