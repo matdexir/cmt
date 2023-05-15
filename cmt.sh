@@ -13,6 +13,11 @@ set -o pipefail
 # Outputs:
 #   the help message
 help_msg() {
+  echo "cmt.sh 0.0.1 by @matdexir"
+  echo ""
+  echo "DESCRIPTION:"
+  echo -e "\tThis program serves as a replacement for git-commit but for conventional commits."
+  echo ""
   echo -e "Usage: cmt.sh [flag]"
   echo -e "\t-a: For amending the previous commit"
   echo -e "\t-h: For printing this message here"
