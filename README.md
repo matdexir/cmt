@@ -7,6 +7,7 @@ It's a tool for writing [Conventional commit messages](https://www.conventionalc
 ```
 gum
 bash(Bourne-Again Shell)
+Linux(Not tested on MacOS)
 ```
 
 ## Usage
@@ -16,6 +17,19 @@ Assuming that your default shell is `bash`, then:
 ```
 chmod +x cmt.sh
 ./cmt.sh
+```
+
+## Help message
+
+```
+cmt.sh 0.0.1 by @matdexir
+
+DESCRIPTION:
+	This program serves as a replacement for git-commit but for conventional commits.
+
+Usage: cmt.sh [flag]
+	-a: For amending the previous commit
+	-h: For printing this message here
 ```
 
 ## Note 
