@@ -23,6 +23,13 @@ help_msg() {
   echo -e "\t-h: For printing this message here"
 }
 
+# Detects for a '.git' folder in the current working directory
+# Globals:
+#   None
+# Arguments:
+#   None
+# Outputs:
+#   the help message
 detect_git() {
   GIT_DIR=$(pwd)/".git"
   if ! test -d "${GIT_DIR}"; then
@@ -33,10 +40,10 @@ detect_git() {
 
 # getopts only supports short flags, hence I will be looking for an alternative in the future
 SHORT=":ah"
-# LONG="amend,help"
 AMEND=""
 
-
+# argument parsing
+# caveat: you can pass more than one argument and I am not quite sure how to deal with it 
 while getopts $SHORT arg; do
 	case "$arg" in
 		a)
@@ -54,7 +61,7 @@ while getopts $SHORT arg; do
 	esac
 done
 
-
+# detects for the presence of a '.git' directory
 detect_git
 
 # gets the type of commit
