@@ -13,14 +13,14 @@ set -o pipefail
 # Outputs:
 #   the help message
 help_msg() {
-  echo "cmt.sh 0.0.1 by @matdexir"
-  echo ""
-  echo "DESCRIPTION:"
-  echo -e "\tThis program serves as a replacement for git-commit but for conventional commits."
-  echo ""
-  echo -e "Usage: cmt.sh [flag]"
-  echo -e "\t-a: For amending the previous commit"
-  echo -e "\t-h: For printing this message here"
+  printf "cmt.sh 0.0.1 by @matdexir"
+  printf ""
+  printf "DESCRIPTION:"
+  printf "\tThis program serves as a replacement for git-commit but for conventional commits."
+  printf ""
+  printf "Usage: cmt.sh [flag]"
+  printf "\t-a: For amending the previous commit"
+  printf "\t-h: For printing this message here"
 }
 
 # Detects for a '.git' folder in the current working directory
@@ -33,7 +33,7 @@ help_msg() {
 detect_git() {
   GIT_DIR=$(pwd)/".git"
   if ! test -d "${GIT_DIR}"; then
-    echo "git is not detected in $(pwd)"
+    printf "git is not detected in %s." "$(pwd)" 
     exit 1
   fi
 }
