@@ -21,7 +21,6 @@ help_msg() {
   echo -e "Usage: cmt.sh [flag]"
   echo -e "\t-a: For amending the previous commit"
   echo -e "\t-h: For printing this message here"
-
 }
 
 # getopts only supports short flags, hence I will be looking for an alternative in the future
@@ -46,6 +45,7 @@ while getopts $SHORT arg; do
 		;;
 	esac
 done
+
 
 
 # gets the type of commit
