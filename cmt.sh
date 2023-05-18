@@ -29,7 +29,7 @@ help_msg() {
 # Arguments:
 #   None
 # Outputs:
-#   the help message
+#   exits if '.git' folder was not found
 detect_git() {
   GIT_DIR=$(pwd)/".git"
   if ! test -d "${GIT_DIR}"; then
