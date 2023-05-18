@@ -23,6 +23,14 @@ help_msg() {
   echo -e "\t-h: For printing this message here"
 }
 
+detect_git() {
+  GIT_DIR=$(pwd)/".git"
+  if ! test -d "${GIT_DIR}"; then
+    echo "git is not detected in $(pwd)"
+    exit 1
+  fi
+}
+
 # getopts only supports short flags, hence I will be looking for an alternative in the future
 SHORT=":ah"
 # LONG="amend,help"
@@ -47,6 +55,7 @@ while getopts $SHORT arg; do
 done
 
 
+detect_git
 
 # gets the type of commit
 TYPE=$(gum choose --cursor="◉ " "fix" "feat" "docs" "style" "ci" "refactor" "test" "chore" "revert" "misc")
