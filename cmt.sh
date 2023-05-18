@@ -33,7 +33,7 @@ help_msg() {
 detect_git() {
   GIT_DIR=$(pwd)/".git"
   if ! test -d "${GIT_DIR}"; then
-    printf "git is not detected in %s." "$(pwd)" 
+    printf "git is not detected in %s." "$(pwd)" 1>&2
     exit 1
   fi
 }
