@@ -41,6 +41,10 @@ help_msg() {
   printf "\t-h: For printing this message here"
 }
 
+is_inside_git_repo() {
+    git rev-parse --is-inside-work-tree >/dev/null 2>&1
+}
+
 # Detects for a '.git' folder in the current working directory
 # Globals:
 #   None
@@ -49,8 +53,7 @@ help_msg() {
 # Outputs:
 #   exits if '.git' folder was not found
 detect_git() {
-  GIT_DIR=$(pwd)/".git"
-  if ! test -d "${GIT_DIR}"; then
+  if ! is_inside_git_repo; then
     printf "git is not detected in %s." "$(pwd)" 1>&2
     exit 1
   fi
