@@ -22,7 +22,6 @@ BLINK=$(tput blink)
 REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 
-
 # Prints the help message
 # Globals:
 #   None
