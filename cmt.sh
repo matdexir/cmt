@@ -61,10 +61,10 @@ files_staged() {
 }
 
 detect_staged() {
-  if [ -z "$(git diff --cached --name-only)" ]; then 
+  if [ -z "$(git diff --cached --name-only)" ]; then
     printf "No files are currently staged.\n"
     exit 1
-  fi 
+  fi
 }
 
 # getopts only supports short flags, hence I will be looking for an alternative in the future
