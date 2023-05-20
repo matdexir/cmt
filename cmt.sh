@@ -56,6 +56,17 @@ detect_git() {
   fi
 }
 
+files_staged() {
+  git diff --cached --name-only 2>/dev/null
+}
+
+detect_staged() {
+  if [ -z "$(git diff --cached --name-only)" ]; then 
+    printf "No files are currently staged.\n"
+    exit 1
+  fi 
+}
+
 # getopts only supports short flags, hence I will be looking for an alternative in the future
 SHORT=":ah"
 AMEND=""
@@ -81,6 +92,8 @@ done
 
 # detects for the presence of a '.git' directory
 detect_git
+
+detect_staged
 
 # gets the type of commit
 TYPE=$(gum choose --cursor="◉ " "fix" "feat" "docs" "style" "ci" "refactor" "test" "chore" "revert" "misc")
