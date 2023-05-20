@@ -30,14 +30,12 @@ UNDERLINE=$(tput smul)
 # Outputs:
 #   the help message
 help_msg() {
-  printf "cmt.sh 0.0.1 by @matdexir"
-  printf ""
-  printf "DESCRIPTION:"
-  printf "\tThis program serves as a replacement for git-commit but for conventional commits."
-  printf ""
-  printf "Usage: cmt.sh [flag]"
-  printf "\t-a: For amending the previous commit"
-  printf "\t-h: For printing this message here"
+  printf "cmt.sh 0.0.1 by @matdexir\n\n"
+  printf "DESCRIPTION:\n"
+  printf "\tThis program serves as a replacement for git-commit but for conventional commits.\n\n"
+  printf "Usage: cmt.sh [flag]\n"
+  printf "\t-a: For amending the previous commit\n"
+  printf "\t-h: For printing this message here\n"
 }
 
 is_inside_git_repo() {
