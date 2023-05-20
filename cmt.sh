@@ -51,7 +51,7 @@ is_inside_git_repo() {
 #   exits if '.git' folder was not found
 detect_git() {
   if ! is_inside_git_repo; then
-    printf "git is not detected in %s." "$(pwd)" 1>&2
+    printf "git is not detected in %s.\n" "$(pwd)" 1>&2
     exit 1
   fi
 }
