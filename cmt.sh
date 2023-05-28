@@ -74,7 +74,7 @@ AMEND=""
 # argument parsing
 # caveat: you can pass more than one argument and I am not quite sure how to deal with it 
 while getopts $SHORT arg; do
-	case "$arg" in
+	case "${arg}" in
 		a)
       AMEND="--amend"
       break
@@ -84,7 +84,7 @@ while getopts $SHORT arg; do
       exit 0
 		;;
 		*)
-			echo "Argument ${arg} is not recognized" >&2
+			echo "Argument -${OPTARG} is not recognized" >&2
 			exit 1
 		;;
 	esac
