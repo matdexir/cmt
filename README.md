@@ -12,11 +12,11 @@ Linux(Not tested on MacOS)
 
 ## Usage
 
-Assuming that your default shell is `bash`, then:
+Assuming that your default shell is `bash`, download the script, then:
 
 ```
 chmod +x cmt.sh
-./cmt.sh
+./cmt.sh (insise a git repo)
 ```
 
 ## Help message
@@ -34,4 +34,4 @@ Usage: cmt.sh [flag]
 
 ## Note 
 
-You can also add `cmt.sh` to your `$PATH` for convenience.
+You can also add `where/file/is/cmt.sh` to your `$PATH` for convenience.
