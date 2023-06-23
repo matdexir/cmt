@@ -96,7 +96,7 @@ detect_git
 detect_staged
 
 # gets the type of commit
-TYPE=$(gum choose --cursor="◉ " "fix" "feat" "docs" "style" "ci" "refactor" "test" "chore" "revert" "misc")
+TYPE=$(gum choose --cursor="◉ " --header="Choose the category that your commit falls under." "fix" "feat" "docs" "style" "ci" "refactor" "test" "chore" "revert" "misc")
 
 # gets the scope of the commit
 SCOPE=$(gum input --placeholder "scope")
