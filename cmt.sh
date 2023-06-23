@@ -99,7 +99,7 @@ detect_staged
 TYPE=$(gum choose --cursor="◉ " --header="Choose the category that your commit falls under." "fix" "feat" "docs" "style" "ci" "refactor" "test" "chore" "revert" "misc" "perf")
 
 # gets the scope of the commit
-SCOPE=$(gum input --placeholder "scope")
+SCOPE=$(gum input --placeholder "scope of your commit")
 
 # confirms for breaking changes or not
 BREAKING=""
